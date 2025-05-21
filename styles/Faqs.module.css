@@ -2,12 +2,6 @@
 
 /* Typography, container, main, nav styles will be inherited from globals.css or Header/Footer components */
 
-/* Specific variables for this page if needed */
-:root {
-  /* --faq-item-bg is already var(--card-bg) in globals.css */
-  /* --card-shadow and --border-color are already defined in globals.css */
-}
-
 /* title and intro can use global .sectionTitle, .sectionSubtitle or be specific */
 .title { /* Specific to this page's main title */
   font-family: var(--font-family-headings); /* Use global var */

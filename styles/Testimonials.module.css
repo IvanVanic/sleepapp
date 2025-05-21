@@ -2,13 +2,6 @@
 
 /* Typography, container, main, nav styles will be inherited from globals.css or Header/Footer components */
 
-/* Specific variables for this page if needed, or use global ones */
-:root {
-  /* --testimonial-bg is already var(--card-bg) in globals.css */
-  /* --card-shadow is already defined in globals.css */
-  --placeholder-bg-color: var(--border-color); /* Using border-color for placeholder bg */
-}
-
 /* title and intro can use global .sectionTitle, .sectionSubtitle or be specific */
 .title { /* Specific to this page's main title */
   font-family: var(--font-family-headings); /* Use global var */
@@ -52,7 +45,7 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: var(--placeholder-bg-color); /* Use page/global var */
+  background-color: var(--border-color); /* Use global var */
   margin-bottom: 1rem;
   object-fit: cover;
   align-self: flex-start;
@@ -110,7 +103,7 @@
 .videoPlaceholder {
   width: 100%;
   height: 200px;
-  background-color: var(--placeholder-bg-color); /* Use page/global var */
+  background-color: var(--border-color); /* Use global var */
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -143,7 +136,7 @@
 .storeLogo {
   height: 40px;
   width: auto;
-  background-color: var(--placeholder-bg-color); /* Use page/global var */
+  background-color: var(--border-color); /* Use global var */
   padding: 0.5rem 1rem;
   border-radius: 5px;
   display: flex;

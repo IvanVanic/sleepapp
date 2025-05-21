@@ -27,6 +27,17 @@
   /* Font Families */
   --font-family-headings: 'Montserrat', 'Inter', sans-serif;
   --font-family-body: 'Open Sans', 'Roboto', sans-serif;
+
+  /* Page-specific placeholder text color from Benefits.module.css */
+  --placeholder-text-color: #777;
+
+  /* Variables from BlogPost.module.css */
+  --meta-text-color: #555;
+  --code-block-bg: #f0f0f0;
+
+  /* Variables from Contact.module.css */
+  --error-text-color: #D32F2F;
+  --success-text-color: #388E3C;
 }
 
 /* Base HTML Element Styling */
