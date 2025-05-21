@@ -1,0 +1,164 @@
+/* BenefitsPage Specific Styles - Benefits.module.css */
+
+/* Typography, container, main, nav styles will be inherited from globals.css or Header/Footer components */
+
+/* Define a new placeholder text color variable if not in globals.css, or use an existing one like --meta-text-color */
+:root {
+  --placeholder-text-color: #777; /* Specific for this page's placeholders if needed */
+}
+
+/* title and intro can use global .sectionTitle, .sectionSubtitle or be specific */
+.title { /* Specific to this page's main title */
+  font-family: var(--font-family-headings); /* Use global var */
+  color: var(--primary-deep-navy); /* Use global var */
+  text-align: center;
+  font-size: 2.8rem;
+  margin-top: 2rem; /* Space after Header */
+  margin-bottom: 1.5rem;
+}
+
+.intro { /* Specific to this page's intro paragraph */
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-dark); /* Use global var */
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* Benefit Section Styling */
+.benefitSection {
+  background-color: var(--card-bg); /* Use global var */
+  padding: 2.5rem 2rem;
+  margin-bottom: 2.5rem;
+  border-radius: 10px; /* Consistent with global .card if applicable */
+  box-shadow: var(--card-shadow); /* Use global var */
+  text-align: left;
+  border-left: 6px solid var(--secondary-purple-dark); /* Use global var */
+}
+
+.benefitIcon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  /* Icon styling */
+}
+
+.problem { /* Specific styling for problem statements */
+  font-family: var(--font-family-headings); /* Use global var */
+  font-size: 1.8rem;
+  color: var(--primary-deep-navy); /* Use global var */
+  margin-bottom: 0.5rem;
+}
+
+.solution { /* Specific styling for solution statements */
+  font-family: var(--font-family-headings); /* Use global var */
+  font-size: 1.4rem;
+  color: var(--secondary-purple-dark); /* Use global var */
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.benefitSection p { /* Paragraphs within benefit sections */
+  font-size: 1rem; /* Standard paragraph size */
+  line-height: 1.6; /* Standard line height */
+  margin-bottom: 1rem;
+  color: var(--text-dark); /* Use global var */
+}
+
+.quantifiableBenefit,
+.userScenario {
+  font-style: italic;
+  color: var(--placeholder-text-color); /* Using the page-specific or a global placeholder color */
+  padding: 0.75rem;
+  background-color: var(--accent-cream); /* Use global var */
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border-left: 3px solid var(--secondary-purple-light); /* Use global var */
+}
+
+.quantifiableBenefit strong,
+.userScenario strong {
+  color: var(--secondary-purple-dark); /* Use global var */
+}
+
+.scientificBacking {
+  font-size: 0.9rem;
+  color: var(--text-dark); /* Use global var */
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-color); /* Use global var */
+  margin-top: 1.5rem;
+}
+
+/* Call to Action Section */
+.ctaSection { /* This can be a global .pageSection style with dark background */
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--primary-deep-navy); /* Use global var */
+  color: var(--text-light); /* Use global var */
+  margin-top: 3rem;
+  border-radius: 10px; /* Consistent with other sections */
+}
+
+.ctaSection h2 { /* Specific styling for CTA heading */
+  font-family: var(--font-family-headings); /* Use global var */
+  font-size: 2.5rem;
+  color: var(--text-light); /* Use global var */
+  margin-bottom: 1rem;
+}
+
+.ctaSection p { /* Specific styling for CTA paragraph */
+  font-size: 1.1rem;
+  color: var(--accent-cream); /* Use global var */
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButton { /* Extends .button-base from globals.css */
+  display: inline-block;
+  padding: 0.8rem 2rem; /* Custom padding */
+  font-family: var(--font-family-headings); /* Global var */
+  font-weight: bold;
+  font-size: 1.1rem; /* Custom font size */
+  color: var(--button-text); /* Global var from .button-base */
+  background-color: var(--button-bg); /* Global var from .button-base */
+  border: none;
+  border-radius: 25px; /* Global var from .button-base */
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Global var from .button-base */
+}
+
+.ctaButton:hover {
+  background-color: var(--button-hover-bg); /* Global var from .button-base */
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  .intro {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+  .problem {
+    font-size: 1.5rem;
+  }
+  .solution {
+    font-size: 1.2rem;
+  }
+  .benefitSection {
+    padding: 2rem 1.5rem;
+  }
+  .ctaSection h2 {
+    font-size: 2rem;
+  }
+}

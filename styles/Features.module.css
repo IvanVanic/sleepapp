@@ -1,0 +1,153 @@
+/* FeaturesPage Specific Styles - Features.module.css */
+
+/* Typography, container, main, nav styles will be inherited from globals.css or Header/Footer components */
+
+/* title and intro can use global .sectionTitle, .sectionSubtitle or be specific */
+.title { /* Specific to this page's main title */
+  font-family: var(--font-family-headings); /* Use global var */
+  color: var(--primary-deep-navy); /* Use global var */
+  text-align: center;
+  font-size: 2.8rem;
+  margin-top: 2rem; /* Space after Header */
+  margin-bottom: 1.5rem;
+}
+
+.intro { /* Specific to this page's intro paragraph */
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-dark); /* Use global var */
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+
+/* Feature Section Styling */
+.featureSection {
+  background-color: var(--card-bg); /* Use global var for white/card background */
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  border-radius: 10px; /* Consistent with global .card if applicable */
+  box-shadow: var(--card-shadow); /* Use global var */
+  text-align: left;
+  overflow: hidden;
+}
+
+.featureSection h2 { /* Specific styling for feature titles */
+  font-family: var(--font-family-headings); /* Use global var */
+  font-size: 2.2rem;
+  color: var(--primary-deep-navy); /* Use global var */
+  margin-bottom: 1.5rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.featureIcon {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  /* Placeholder styling for icon itself, actual SVG will be used via Image component */
+}
+
+.featureSection p { /* Paragraphs within feature sections */
+  font-size: 1rem; /* Standard paragraph size */
+  line-height: 1.6; /* Standard line height */
+  margin-bottom: 1rem;
+  color: var(--text-dark); /* Use global var */
+}
+
+.featureScreenshot {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  background-color: var(--border-color); /* Using a global var for placeholder bg */
+  margin: 1.5rem auto 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--text-dark); /* Use global var */
+  padding: 2rem 0;
+  border: 1px solid var(--border-color); /* Use global var */
+}
+
+.technicalNote {
+  background-color: var(--accent-cream); /* Use global var */
+  border-left: 4px solid var(--secondary-purple-dark); /* Use global var */
+  padding: 1rem;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--primary-deep-navy); /* Use global var */
+  border-radius: 4px;
+  font-style: italic;
+}
+
+/* Call to Action Section */
+.ctaSection { /* This can be a global .pageSection style with dark background */
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--primary-deep-navy); /* Use global var */
+  color: var(--text-light); /* Use global var */
+  margin-top: 3rem;
+  border-radius: 10px; /* Added for consistency with other sections */
+}
+
+.ctaSection h2 { /* Specific styling for CTA heading */
+  font-family: var(--font-family-headings); /* Use global var */
+  font-size: 2.5rem;
+  color: var(--text-light); /* Use global var */
+  margin-bottom: 1rem;
+}
+
+.ctaSection p { /* Specific styling for CTA paragraph */
+  font-size: 1.1rem;
+  color: var(--accent-cream); /* Use global var */
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButton { /* Extends .button-base from globals.css */
+  display: inline-block;
+  padding: 0.8rem 2rem; /* Custom padding */
+  font-family: var(--font-family-headings); /* Global var */
+  font-weight: bold;
+  font-size: 1.1rem; /* Custom font size */
+  color: var(--button-text); /* Global var from .button-base */
+  background-color: var(--button-bg); /* Global var from .button-base */
+  border: none;
+  border-radius: 25px; /* Global var from .button-base */
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Global var from .button-base */
+}
+
+.ctaButton:hover {
+  background-color: var(--button-hover-bg); /* Global var from .button-base */
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  .intro {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+  .featureSection h2 {
+    font-size: 1.8rem;
+  }
+  .featureSection {
+    padding: 2rem 1.5rem;
+  }
+  .ctaSection h2 {
+    font-size: 2rem;
+  }
+}

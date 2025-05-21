@@ -1,0 +1,139 @@
+/* components/Header.module.css */
+.header {
+  background-color: var(--primary-deep-navy);
+  color: var(--text-light);
+  padding: 1rem 0; /* Vertical padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky; /* Makes header stick to top */
+  top: 0;
+  z-index: 1000; /* Ensures header is above other content */
+  width: 100%;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Horizontal padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-family: var(--font-family-headings);
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: var(--secondary-purple-light);
+  text-decoration: none;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav li {
+  margin-left: 1.5rem; /* Spacing between nav items */
+}
+
+.nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600; /* Slightly bolder for nav links */
+  padding: 0.5rem 0; /* Vertical padding for larger click target, no horizontal */
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav a::after { /* Underline effect on hover/active */
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px; /* Position underline slightly below text */
+  left: 0;
+  background-color: var(--secondary-purple-light);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav a:hover::after,
+.nav a.active::after { /* Style for active link would need Next.js Router events or similar */
+  width: 100%;
+}
+
+.nav a:hover {
+  color: var(--secondary-purple-light); /* Text color change on hover */
+  text-decoration: none; /* Remove default underline */
+}
+
+/* Mobile Menu Button - initially hidden on larger screens */
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobileMenuButton svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive adjustments for navigation */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* Hide desktop nav on smaller screens */
+    /* Future: Implement dropdown menu logic here */
+    /* position: absolute;
+    top: 100%; 
+    left: 0;
+    right: 0;
+    background-color: var(--primary-deep-navy);
+    flex-direction: column;
+    padding: 1rem 0; */
+  }
+
+  /* .nav.open {
+    display: flex;
+  } */
+
+  .nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav li {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav a {
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator for mobile nav items */
+  }
+
+  .nav li:last-child a {
+    border-bottom: none;
+  }
+
+  .nav a::after { /* Disable underline effect for mobile nav items if it looks cluttered */
+    display: none;
+  }
+
+  .mobileMenuButton {
+    display: block; /* Show mobile menu button */
+  }
+}

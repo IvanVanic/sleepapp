@@ -1,0 +1,240 @@
+/* BlogIndex Specific Styles - BlogIndex.module.css */
+
+/* Typography, container, main, nav styles will be inherited from globals.css or Header/Footer components */
+
+/* title and intro can use global .sectionTitle, .sectionSubtitle or be specific */
+.title { /* Specific to this page's main title */
+  font-family: var(--font-family-headings); /* Use global var */
+  color: var(--primary-deep-navy); /* Use global var */
+  text-align: center;
+  font-size: 2.8rem;
+  margin-top: 2rem; /* Space after Header */
+  margin-bottom: 1rem;
+}
+
+.intro { /* Specific to this page's intro paragraph */
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-dark); /* Use global var */
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* Filtering and Sorting UI Placeholders */
+.filterSortContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  padding: 1rem;
+  background-color: var(--card-bg); /* Use global var */
+  border-radius: 8px; /* Consistent with global .card */
+  box-shadow: var(--card-shadow); /* Use global var */
+}
+
+.filterSortContainer select,
+.filterSortContainer .sortLinks a {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--border-color); /* Use global var */
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-family: var(--font-family-body); /* Use global var */
+  background-color: var(--card-bg); /* Use global var for select background */
+  margin: 0.5rem;
+  color: var(--text-dark); /* Use global var */
+  transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+.filterSortContainer select:focus,
+.filterSortContainer .sortLinks a:focus {
+  outline: none;
+  border-color: var(--link-hover-color); /* Use global var */
+}
+
+
+.filterSortContainer label {
+  margin-right: 0.5rem;
+  font-weight: bold;
+  color: var(--primary-deep-navy); /* Use global var */
+  font-family: var(--font-family-headings); /* Use global var */
+}
+
+.sortLinks a {
+  text-decoration: none;
+  color: var(--link-color); /* Use global var */
+  margin-left: 0.5rem;
+}
+
+.sortLinks a:hover {
+  color: var(--link-hover-color); /* Use global var */
+  text-decoration: underline;
+}
+
+/* Blog Post Previews Grid */
+.postsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.postPreviewCard {
+  background-color: var(--card-bg); /* Use global var */
+  border-radius: 10px; /* Consistent with global .card */
+  box-shadow: var(--card-shadow); /* Use global var */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color); /* Use global var */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Hover effect */
+}
+
+.postPreviewCard:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* Enhanced shadow */
+  transform: translateY(-3px); /* Slight lift */
+}
+
+.postImagePlaceholder {
+  width: 100%;
+  height: 180px;
+  background-color: var(--secondary-purple-light); /* Use global var */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light); /* Use global var */
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.postContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.postTitle { /* Will inherit h2 styles from globals.css or use specific */
+  font-family: var(--font-family-headings); /* Use global var */
+  font-size: 1.5rem;
+  color: var(--primary-deep-navy); /* Use global var */
+  margin-bottom: 0.75rem;
+}
+
+.postTitle a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.postTitle a:hover {
+  color: var(--link-color); /* Use global var */
+}
+
+.postExcerpt {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  color: var(--text-dark); /* Use global var */
+}
+
+.postMeta {
+  font-size: 0.85rem;
+  color: var(--meta-text-color, #555); /* Use global var or define if missing */
+  margin-bottom: 0.5rem;
+}
+
+.postMeta span {
+  margin-right: 10px;
+}
+
+.postCategoriesTags {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.postCategoriesTags span { /* For individual category/tag pills */
+  background-color: var(--accent-cream); /* Use global var */
+  color: var(--secondary-purple-dark); /* Use global var */
+  padding: 0.2rem 0.5rem;
+  border-radius: 15px;
+  margin-right: 5px;
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 0.75rem; /* Slightly smaller for tags */
+}
+
+.readMoreLink { /* Extends .button-base */
+  display: inline-block;
+  padding: 0.6rem 1.2rem; /* Custom padding */
+  font-family: var(--font-family-headings); /* Global var */
+  font-weight: bold;
+  font-size: 0.9rem; /* Custom font size */
+  color: var(--button-text); /* Global var */
+  background-color: var(--primary-deep-navy); /* Using navy for this button */
+  border: none;
+  border-radius: 20px; /* Custom radius */
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Global transition */
+  align-self: flex-start;
+}
+
+.readMoreLink:hover {
+  background-color: var(--secondary-purple-dark); /* Hover to purple */
+  transform: translateY(-2px); /* Global transform */
+}
+
+/* Pagination Placeholder */
+.pagination {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
+}
+
+.pagination a, .pagination span {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--link-color); /* Use global var */
+  border: 1px solid var(--border-color); /* Use global var */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+}
+
+.pagination a:hover {
+  background-color: var(--link-hover-color); /* Use global var */
+  color: var(--text-light); /* Use global var */
+  border-color: var(--link-hover-color); /* Use global var */
+}
+
+.pagination .currentPage {
+  background-color: var(--primary-deep-navy); /* Use global var */
+  color: var(--text-light); /* Use global var */
+  border-color: var(--primary-deep-navy); /* Use global var */
+  font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  .intro {
+    font-size: 1rem;
+  }
+  .filterSortContainer {
+    flex-direction: column;
+  }
+  .filterSortContainer select, .filterSortContainer .sortLinks {
+    width: 100%;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  .postsGrid {
+    grid-template-columns: 1fr; /* Stack posts */
+  }
+}

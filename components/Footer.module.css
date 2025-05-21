@@ -1,0 +1,132 @@
+/* components/Footer.module.css */
+.footer {
+  background-color: var(--primary-deep-navy);
+  color: var(--text-light);
+  padding: 3rem 1rem; /* Ample padding */
+  margin-top: auto; /* Pushes footer to the bottom of the page if content is short */
+  width: 100%;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 2rem; /* Spacing between sections */
+  margin-bottom: 2rem;
+}
+
+.footerSection {
+  /* No specific styling needed here unless for alignment or specific width */
+}
+
+.footerLogo {
+  font-family: var(--font-family-headings);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+}
+
+.footerSection h4 { /* For section titles like "Quick Links" */
+  font-family: var(--font-family-headings);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--secondary-purple-light); /* Accent color for footer headings */
+  margin-bottom: 1rem;
+}
+
+.footerSection p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--accent-cream); /* Slightly off-white for better readability */
+  margin-bottom: 0.5rem;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerSection li {
+  margin-bottom: 0.5rem;
+}
+
+.footerSection a {
+  color: var(--accent-cream);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footerSection a:hover {
+  color: var(--secondary-purple-light);
+  text-decoration: underline;
+}
+
+.socialLinks a {
+  color: var(--accent-cream);
+  margin-right: 1rem; /* Spacing between social icons */
+  font-size: 1rem; /* Placeholder size, icons would be better */
+  transition: color 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: var(--secondary-purple-light);
+}
+
+.socialLinks a:last-child {
+  margin-right: 0;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+  font-size: 0.85rem;
+  color: var(--accent-cream);
+}
+
+.copyright p {
+  margin: 0;
+}
+
+/* Responsive adjustments for footer sections */
+@media (max-width: 768px) {
+  .footerContent {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .footerSection {
+    margin-bottom: 1rem; /* Add some space between stacked sections */
+  }
+
+  .footerLogo {
+    font-size: 1.3rem;
+  }
+
+  .footerSection h4 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerContent {
+    grid-template-columns: 1fr; /* Stack all sections on very small screens */
+    text-align: center; /* Center text for stacked sections */
+  }
+
+  .socialLinks {
+    display: flex;
+    justify-content: center; /* Center social links */
+  }
+
+  .socialLinks a {
+    margin: 0 0.5rem;
+  }
+}

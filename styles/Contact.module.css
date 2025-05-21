@@ -1,0 +1,228 @@
+/* ContactPage Specific Styles - Contact.module.css */
+
+/* Typography, container, main, nav styles will be inherited from globals.css or Header/Footer components */
+
+/* Specific variables for this page if needed */
+:root {
+  /* --input-border is var(--border-color) in globals.css */
+  /* --input-focus-border is var(--secondary-purple-dark) or var(--link-hover-color) in globals.css */
+  --error-text-color: #D32F2F; /* Standard error color */
+  --success-text-color: #388E3C; /* Standard success color */
+  /* --card-bg and --card-shadow are defined in globals.css */
+}
+
+/* title and intro can use global .sectionTitle, .sectionSubtitle or be specific */
+.title { /* Specific to this page's main title */
+  font-family: var(--font-family-headings); /* Use global var */
+  color: var(--primary-deep-navy); /* Use global var */
+  text-align: center;
+  font-size: 2.8rem;
+  margin-top: 2rem; /* Space after Header */
+  margin-bottom: 1rem;
+}
+
+.intro { /* Specific to this page's intro paragraph */
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-dark); /* Use global var */
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* Contact Form Styling */
+.contactForm {
+  background-color: var(--card-bg); /* Use global var */
+  padding: 2rem;
+  border-radius: 10px; /* Consistent with global .card */
+  box-shadow: var(--card-shadow); /* Use global var */
+  margin-bottom: 3rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--primary-deep-navy); /* Use global var */
+  font-family: var(--font-family-headings); /* Use global var */
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color); /* Use global var */
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: var(--font-family-body); /* Use global var */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  color: var(--text-dark); /* Use global var */
+}
+
+.formGroup input[type="text"]:focus,
+.formGroup input[type="email"]:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--secondary-purple-dark); /* Use global var for focus */
+  box-shadow: 0 0 0 3px var(--secondary-purple-light-transparent, rgba(155, 89, 182, 0.2)); /* Use global var or define */
+}
+
+.formGroup textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.error {
+  color: var(--error-text-color); /* Use page/global var */
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  font-family: var(--font-family-body); /* Use global var */
+}
+
+.submitButton { /* Extends .button-base from globals.css */
+  display: inline-block;
+  padding: 0.8rem 2rem; /* Custom padding */
+  font-family: var(--font-family-headings); /* Global var */
+  font-weight: bold;
+  font-size: 1.1rem; /* Custom font size */
+  color: var(--button-text); /* Global var */
+  background-color: var(--button-bg); /* Global var */
+  border: none;
+  border-radius: 25px; /* Global var */
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Global var */
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: var(--button-hover-bg); /* Global var */
+  transform: translateY(-2px); /* Global var */
+}
+
+.submitButton:disabled { /* Styling for disabled state from globals.css .button-base:disabled */
+  background-color: #ccc; /* Fallback, use global var if defined for disabled state */
+  color: #888; /* Fallback, use global var if defined for disabled state */
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Success Message Styling */
+.successMessage {
+  background-color: var(--card-bg); /* Use global var */
+  padding: 2rem;
+  border-radius: 10px; /* Consistent with global .card */
+  box-shadow: var(--card-shadow); /* Use global var */
+  text-align: center;
+  border-left: 5px solid var(--success-text-color); /* Use page/global var */
+}
+
+.successMessage h2 { /* This is the page title, already styled by .title */
+  color: var(--success-text-color); /* Use page/global var */
+  font-family: var(--font-family-headings); /* Use global var */
+  margin-bottom: 1rem;
+}
+
+.successMessage p {
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family-body); /* Use global var */
+  color: var(--text-dark); /* Use global var */
+}
+
+.successMessage a {
+  color: var(--link-color); /* Use global var */
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.successMessage a:hover {
+  color: var(--link-hover-color); /* Use global var */
+}
+
+/* Contact Information Section */
+.contactInfo {
+  background-color: var(--card-bg); /* Use global var */
+  padding: 2rem;
+  border-radius: 10px; /* Consistent with global .card */
+  box-shadow: var(--card-shadow); /* Use global var */
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.contactInfo h2 {
+  font-family: var(--font-family-headings); /* Use global var */
+  color: var(--primary-deep-navy); /* Use global var */
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.contactInfo p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-body); /* Use global var */
+  color: var(--text-dark); /* Use global var */
+}
+
+.contactInfo a {
+  color: var(--link-color); /* Use global var */
+  text-decoration: none;
+}
+
+.contactInfo a:hover {
+  text-decoration: underline;
+  color: var(--link-hover-color); /* Use global var */
+}
+
+.socialLinks {
+  margin-top: 1rem;
+}
+
+.socialLinks a {
+  margin: 0 0.75rem;
+  font-size: 1rem;
+  display: inline-block;
+  color: var(--link-color); /* Use global var */
+  /* Icons would be styled here */
+}
+.socialLinks a:hover {
+  color: var(--link-hover-color); /* Use global var */
+}
+
+
+/* Map Placeholder */
+.mapPlaceholder {
+  width: 100%;
+  height: 300px;
+  background-color: var(--border-color); /* Use global var for placeholder bg */
+  border-radius: 10px; /* Consistent with global .card */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dark); /* Use global var */
+  font-size: 1.2rem;
+  box-shadow: var(--card-shadow); /* Use global var */
+  margin-top: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .main {
+    padding: 1.5rem;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .intro {
+    font-size: 1rem;
+  }
+  .contactForm, .contactInfo {
+    padding: 1.5rem;
+  }
+}

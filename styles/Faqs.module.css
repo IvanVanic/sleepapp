@@ -1,0 +1,195 @@
+/* FaqsPage Specific Styles - Faqs.module.css */
+
+/* Typography, container, main, nav styles will be inherited from globals.css or Header/Footer components */
+
+/* Specific variables for this page if needed */
+:root {
+  /* --faq-item-bg is already var(--card-bg) in globals.css */
+  /* --card-shadow and --border-color are already defined in globals.css */
+}
+
+/* title and intro can use global .sectionTitle, .sectionSubtitle or be specific */
+.title { /* Specific to this page's main title */
+  font-family: var(--font-family-headings); /* Use global var */
+  color: var(--primary-deep-navy); /* Use global var */
+  text-align: center;
+  font-size: 2.8rem;
+  margin-top: 2rem; /* Space after Header */
+  margin-bottom: 1rem;
+}
+
+.intro { /* Specific to this page's intro paragraph */
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-dark); /* Use global var */
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* Search Bar Styling */
+.searchBar {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: var(--font-family-body); /* Use global var */
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--border-color); /* Use global var */
+  border-radius: 20px; /* Custom radius */
+  box-shadow: var(--card-shadow); /* Use global var */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.searchBar:focus {
+  outline: none;
+  border-color: var(--secondary-purple-dark); /* Use global var */
+  box-shadow: 0 0 0 3px var(--secondary-purple-light-transparent, rgba(155, 89, 182, 0.2)); /* Use global var or define a transparent version */
+}
+
+/* Category Section */
+.categorySection {
+  margin-bottom: 3rem;
+}
+
+.categoryTitle {
+  font-family: var(--font-family-headings); /* Use global var */
+  color: var(--primary-deep-navy); /* Use global var */
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--secondary-purple-dark); /* Use global var */
+}
+
+/* FAQ Item Styling (using <details> and <summary>) */
+.faqItem {
+  background-color: var(--card-bg); /* Use global var */
+  margin-bottom: 1rem;
+  border-radius: 8px; /* Consistent with global .card */
+  box-shadow: var(--card-shadow); /* Use global var */
+  border: 1px solid var(--border-color); /* Use global var */
+  transition: border-left-color 0.3s ease; /* Smooth transition for open state */
+}
+
+.faqItem[open] {
+  border-left: 5px solid var(--secondary-purple-dark); /* Use global var */
+}
+
+.faqQuestion {
+  font-family: var(--font-family-headings); /* Use global var */
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--primary-deep-navy); /* Use global var */
+  font-size: 1.1rem;
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.faqQuestion:hover {
+  color: var(--secondary-purple-dark); /* Use global var */
+}
+
+.faqQuestion::-webkit-details-marker {
+  display: none;
+}
+
+.faqQuestion::after { /* Custom marker for expand/collapse */
+  content: '+';
+  font-size: 1.5rem;
+  color: var(--secondary-purple-dark); /* Use global var */
+  transition: transform 0.3s ease-in-out, color 0.3s ease; /* Smooth transition */
+}
+
+.faqItem[open] .faqQuestion::after {
+  transform: rotate(45deg);
+  content: '×';
+}
+.faqItem[open] .faqQuestion {
+  color: var(--secondary-purple-dark); /* Change question color when open */
+}
+
+
+.faqAnswer {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  line-height: 1.6;
+  color: var(--text-dark); /* Use global var */
+  font-size: 1rem;
+  border-top: 1px solid var(--border-color); /* Use global var */
+  margin-top: 0.5rem;
+}
+
+/* Contact Support CTA Section */
+.contactSupportCta { /* This can be a global .pageSection style with dark background */
+  background-color: var(--primary-deep-navy); /* Use global var */
+  color: var(--text-light); /* Use global var */
+  padding: 3rem 2rem;
+  margin-top: 4rem;
+  border-radius: 10px; /* Consistent with other sections */
+  text-align: center;
+}
+
+.contactSupportCta h2 {
+  font-family: var(--font-family-headings); /* Use global var */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-light); /* Use global var */
+}
+
+.contactSupportCta p {
+  font-size: 1.1rem;
+  color: var(--accent-cream); /* Use global var */
+  margin-bottom: 1.5rem;
+}
+
+.ctaButton { /* Extends .button-base from globals.css */
+  display: inline-block;
+  padding: 0.8rem 2rem; /* Custom padding */
+  font-family: var(--font-family-headings); /* Global var */
+  font-weight: bold;
+  font-size: 1.1rem; /* Custom font size */
+  color: var(--button-text); /* Global var from .button-base */
+  background-color: var(--button-bg); /* Global var from .button-base */
+  border: none;
+  border-radius: 25px; /* Global var from .button-base */
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Global var from .button-base */
+}
+
+.ctaButton:hover {
+  background-color: var(--button-hover-bg); /* Global var from .button-base */
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .main {
+    padding: 1.5rem;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .categoryTitle {
+    font-size: 1.5rem;
+  }
+  .faqQuestion {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+  .faqAnswer {
+    padding: 0 1rem 1rem 1rem;
+    font-size: 0.95rem;
+  }
+  .contactSupportCta h2 {
+    font-size: 1.8rem;
+  }
+}

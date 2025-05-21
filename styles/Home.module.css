@@ -1,0 +1,251 @@
+/* Typography adjustments will be handled by globals.css */
+/* Container and main styling might be specific enough to keep or adjust based on global container styles */
+.container {
+  /* font-family and color will be inherited from body */
+  /* background-color might be specific or inherited */
+  /* This class might be removed if a global .container class serves the purpose */
+}
+
+.main {
+  max-width: 1200px; /* This max-width might be specific to Home page */
+  margin: 0 auto;
+  padding: 2rem; /* This padding might be page-specific */
+}
+
+/* General Section Styling - uses global vars */
+.section {
+  padding: 4rem 1rem; /* Adjusted padding to match global .pageSection idea */
+  text-align: center;
+}
+
+.section:nth-child(even) {
+  background-color: var(--card-bg); /* Using global var for white/card background */
+}
+
+/* sectionTitle and sectionSubtitle will inherit from globals.css if matching structure */
+/* Or can be specific like below, using global vars */
+.sectionTitle {
+  font-size: 2.5rem; /* Example: Can be made consistent with global .sectionTitle */
+  margin-bottom: 2rem;
+  color: var(--primary-deep-navy); /* Global var */
+}
+
+.sectionSubtitle {
+  font-size: 1.2rem; /* Example: Can be made consistent with global .sectionSubtitle */
+  margin-bottom: 3rem;
+  color: var(--text-dark); /* Global var */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero Section - uses global vars */
+.hero {
+  background-color: var(--primary-deep-navy); /* Global var */
+  color: var(--text-light); /* Global var */
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.heroHeadline {
+  font-size: 3rem; /* Specific styling */
+  color: var(--text-light); /* Global var */
+  margin-bottom: 1rem;
+}
+
+.heroValueProposition {
+  font-size: 1.25rem; /* Specific styling */
+  color: var(--accent-cream); /* Global var */
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroImagePlaceholder {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  background-color: var(--secondary-purple-light); /* Global var */
+  margin: 2rem auto;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--text-light); /* Global var */
+}
+
+/* ctaButton can extend .button-base from globals.css or be specific using global vars */
+.ctaButton {
+  /* Replicates .button-base and adds specific colors */
+  display: inline-block;
+  padding: 0.8rem 2rem; /* Custom padding */
+  font-family: var(--font-family-headings);
+  font-weight: bold;
+  font-size: 1.1rem; /* Custom font size */
+  color: var(--button-text); /* Global var for button text */
+  background-color: var(--button-bg); /* Global var for button bg */
+  border: none;
+  border-radius: 25px; /* Pill shape from global */
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Global transition */
+}
+
+.ctaButton:hover {
+  background-color: var(--button-hover-bg); /* Global var for button hover bg */
+  transform: translateY(-2px); /* Global transform from .button-base */
+}
+
+/* Feature Snapshot Section */
+.featureSnapshot {
+  /* Uses .section styling, which is now globally influenced */
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.featureItem {
+  text-align: center;
+}
+
+.featureIcon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--secondary-purple-dark); /* Global var */
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light); /* Global var */
+  font-size: 1.5rem;
+}
+
+.featureTitle { /* Will inherit font from global h3/h4 or can be specific */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-deep-navy); /* Global var */
+  margin-bottom: 0.5rem;
+}
+
+.featureDescription {
+  font-size: 0.9rem;
+  color: var(--text-dark); /* Global var */
+}
+
+/* Core Benefits Section */
+.coreBenefits {
+   /* Uses .section styling */
+}
+
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 700px;
+  margin: 2rem auto 0;
+  text-align: left;
+}
+
+.benefitItem {
+  background-color: var(--card-bg); /* Global var */
+  padding: 1.5rem;
+  border-radius: 8px; /* Consistent with global .card if applicable */
+  box-shadow: var(--card-shadow); /* Global var */
+  border-left: 5px solid var(--secondary-purple-dark); /* Global var */
+}
+
+.benefitItem h3 { /* Will inherit font from global h3 or can be specific */
+  font-size: 1.3rem;
+  color: var(--primary-deep-navy); /* Global var */
+  margin-bottom: 0.5rem;
+}
+
+/* Testimonial Snippets Section */
+.testimonialSnippets {
+  /* Uses .section styling */
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonialCard {
+  background-color: var(--primary-deep-navy); /* Global var */
+  color: var(--text-light); /* Global var */
+  padding: 2rem;
+  border-radius: 8px; /* Consistent with global .card if applicable */
+  text-align: left;
+  box-shadow: var(--card-shadow); /* Global var */
+}
+
+.testimonialText {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: var(--accent-cream); /* Global var */
+}
+
+.testimonialAuthor {
+  font-weight: bold;
+  color: var(--secondary-purple-light); /* Global var */
+  text-align: right;
+}
+
+/* Secondary CTA Section */
+.secondaryCta {
+  /* Uses .section styling */
+  padding-bottom: 5rem;
+}
+
+/* secondaryCtaButton can extend .button-base or be specific using global vars */
+.secondaryCtaButton {
+  display: inline-block;
+  padding: 0.8rem 2.5rem; /* Custom padding */
+  font-family: var(--font-family-headings);
+  font-weight: bold;
+  font-size: 1.1rem; /* Custom font size */
+  color: var(--text-light); /* Initial text color */
+  background-color: var(--primary-deep-navy); /* Initial background */
+  border: 2px solid var(--primary-deep-navy); /* Border with global var */
+  border-radius: 25px; /* Pill shape */
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Global transition */
+}
+
+.secondaryCtaButton:hover {
+  background-color: var(--accent-cream); /* Hover background */
+  color: var(--primary-deep-navy); /* Hover text color */
+  transform: translateY(-2px);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heroHeadline {
+    font-size: 2.5rem;
+  }
+  .heroValueProposition {
+    font-size: 1.1rem;
+  }
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  .featuresGrid {
+    grid-template-columns: 1fr; /* Stack features on smaller screens */
+  }
+  .testimonialsGrid {
+    grid-template-columns: 1fr; /* Stack testimonials on smaller screens */
+  }
+}
